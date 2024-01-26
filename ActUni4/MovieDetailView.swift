@@ -2,21 +2,21 @@
 //  MovieDetailView.swift
 //  ActUni4
 //
-//  Created by user248205 on 26/1/24.
+//  Created by Luciano Ivan Blanco on 26/1/24.
 //
 
 import SwiftUI
 
 struct MovieDetailView: View {
     var film: Film
-
+    
     var body: some View {
         ScrollView {
             VStack {
                 Image(film.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-
+                
                 VStack(alignment: .leading, spacing: 8) {
                     HStack {
                         Text(film.name)
@@ -26,7 +26,7 @@ struct MovieDetailView: View {
                         Text("\(film.date)")
                             .font(.subheadline)
                     }
-
+                    
                     HStack {
                         ForEach(film.categories, id: \.self) { categories in
                             Text(categories)
@@ -36,11 +36,11 @@ struct MovieDetailView: View {
                                 .cornerRadius(4)
                         }
                     }
-
+                    
                     Text("Sinopsis")
                         .font(.title2)
                         .fontWeight(.bold)
-
+                    
                     Text(film.sinopsis)
                 }
                 .padding()

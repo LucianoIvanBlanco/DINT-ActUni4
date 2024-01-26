@@ -12,7 +12,7 @@ struct ActUni4App: App {
     var body: some Scene {
         WindowGroup {
             ContentView(films: Film.sampleData)
-        
+            
         }
     }
 }
