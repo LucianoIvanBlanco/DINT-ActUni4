@@ -2,7 +2,7 @@
 //  ActUni4App.swift
 //  ActUni4
 //
-//  Created by user248205 on 26/1/24.
+//  Created by Luciano Ivan Blanco on 26/1/24.
 //
 
 import SwiftUI
@@ -11,7 +11,8 @@ import SwiftUI
 struct ActUni4App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(films: Film.sampleData)
+        
         }
     }
 }
